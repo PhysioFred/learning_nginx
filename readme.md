@@ -1,3 +1,2 @@
-Learning all the auth and cache for git to github link
-Also learning it with docker
-Let's see if cache works now
+Let's get started on making this nginx docker image
+port will be 8989
