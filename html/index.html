@@ -1,11 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Advanced Nginx Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .content-section {
+            margin-bottom: 2rem;
+        }
+        .content-section h2 {
+            color: #2c3e50;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
 <body>
-    <h1>Welcome to My Updated Nginx Page!</h1>
-    <p>This is my <b>new</b> custom page with some changes.</p>
-    <p>Maybe I can add a list:</p>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
+    <header>
+        <h1>Welcome to My Advanced Nginx Page</h1>
+        <p>Powered by Docker on WSL 2!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="content-section" id="home">
+            <h2>Home Section</h2>
+            <p>This is a dynamically styled webpage served by Nginx running in a Docker container. Feel free to explore the sections below!</p>
+            <button onclick="showMessage()">Click Me!</button>
+            <p id="message" style="margin-top: 1rem;"></p>
+        </div>
+
+        <div class="content-section" id="about">
+            <h2>About This Page</h2>
+            <p>This page was created to demonstrate a more elaborate HTML setup. It includes custom CSS for styling and a bit of JavaScript for interactivity. You can customize this further by editing the <code>index.html</code> file in your project directory!</p>
+            <ul>
+                <li>Technology: Nginx + Docker</li>
+                <li>Host: WSL 2 on Windows</li>
+                <li>Author: You!</li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="contact">
+            <h2>Contact Information</h2>
+            <p>For more info, you can reach out (this is just a demo):</p>
+            <p>Email: example@nginx.com</p>
+            <p>Status: <span id="status">Offline</span></p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById("message");
+            message.style.color = "#27ae60";
+            message.textContent = "Great job! You clicked the button!";
+            
+            // Toggle status
+            const status = document.getElementById("status");
+            status.textContent = status.textContent === "Offline" ? "Online" : "Offline";
+        }
+    </script>
 </body>
 </html>
